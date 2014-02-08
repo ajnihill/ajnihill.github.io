@@ -1,0 +1,1 @@
+This repository hosts the content for ajnihill.com
