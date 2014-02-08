@@ -1,3 +1,3 @@
 ajnihill.github.io
 ==================
-TEst test test
+This repository hosts the content files for ajnihill.com.
