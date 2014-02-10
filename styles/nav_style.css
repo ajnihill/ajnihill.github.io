@@ -28,7 +28,7 @@
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
 
-a, a:visited, nav {
+a.nav, a.nav:visited, nav {
 -moz-transition: color 0.5s, background 0.7s, -moz-border-radius 0.7s, text-indent 0.2s;
 -webkit-transition: color 0.5s, background 0.7s, -webkit-border-radius 0.7s, text-indent 0.2s;
 -o-transition: color 0.5s, background 0.7s, border-radius 0.7s, text-indent 0.2s;
@@ -51,36 +51,36 @@ width: 150px;
 height: 299px;
 }
 
-nav a {
+nav a.nav {
 display: none;
 text-indent: -9999px;
 position: relative;
 height: 20px;
 padding: 13px 0;
-color: #fff;
+color: #6E6E70;
 }
 
-nav a:first-child:hover {
+nav a.nav:first-child:hover {
 text-indent: -9999px;
 }
 
-nav:hover>a {
+nav:hover>a.nav {
 display: block;
 }
 
-nav:hover>a:first-child:after {
-color: #6daeaf;
-background: #505664;
+nav:hover>a.nav:first-child:after {
+color: #fff;
+background: #6E6E70;
 }
 
-nav a:first-child {
+nav a.nav:first-child {
 display: block;
 text-align: center;
 margin-bottom: 16px;
 cursor: default;
 }
 
-nav a:after {
+nav a.nav:after {
 position: absolute;
 top: 0;
 padding: 10px 0;
@@ -90,23 +90,23 @@ font-family: 'fontello';
 font-size: 24px;
 display: block;
 text-indent: 0;
-background: #6daeaf;
+background: #365AFF;
 }
 
-nav a:hover {
+nav a.nav:hover {
 text-indent: 0px;
-text-align: center;
+text-align: left;
 margin-left: 70px;
 }
 
-nav a:hover:after {
+nav a.nav:hover:after {
 color: #999;
 background: #fff;
 text-align: center;
 margin-left: -70px;
 }
 
-nav a:first-child:before {
+nav a.nav:first-child:before {
 position: absolute;
 text-indent: 0;
 top: 55px;
@@ -116,23 +116,23 @@ width: 0;
 height: 0; 
 border-left: 7px solid transparent;
 border-right: 7px solid transparent;
-border-bottom: 7px solid #6daeaf;
+border-bottom: 7px solid #365AFF;
 }
 
-nav a:first-child:hover:before {
+nav a.nav:first-child:hover:before {
 margin-left: -70px;
 }
 
-nav a:first-child:after {
+nav a.nav:first-child:after {
 left: 0;
 content: '\e001';
-background: #656d7e;
+background: #365AFF;
 -webkit-border-radius: 5px;
 -moz-border-radius: 5px;
 border-radius: 5px;
 }
 
-nav a:nth-child(2):after {
+nav a.nav:nth-child(2):after {
 content: "\e002";
 -webkit-border-top-left-radius: 5px;
 -webkit-border-top-right-radius: 5px;
@@ -142,19 +142,19 @@ border-top-left-radius: 5px;
 border-top-right-radius: 5px;
 }
 
-nav a:nth-child(3):after {
+nav a.nav:nth-child(3):after {
 content: "\e803";
 }
 
-nav a:nth-child(4):after {
+nav a.nav:nth-child(4):after {
 content: "\e804";
 }
 
-nav a:nth-child(5):after {
+nav a.nav:nth-child(5):after {
 content: "\e805";
 }
 
-nav a:last-child:after {
+nav a.nav:last-child:after {
 content: "\e006";
 -webkit-border-bottom-left-radius: 5px;
 -webkit-border-bottom-right-radius: 5px;
@@ -166,8 +166,8 @@ border-bottom-right-radius: 5px;
 
 @media handheld, only screen and (max-width: 767px) {
 
-  nav a:hover {
-  color: #6daeaf !important;
+  nav a.nav:hover {
+  color: #365AFF !important;
   background: #fff;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -176,20 +176,20 @@ border-bottom-right-radius: 5px;
   padding-left: 17px;
 }
 
-nav a:hover:after {
+nav a.nav:hover:after {
   margin-left: -70px;
   padding-left: 0 !important;
 }
 
-nav a:first-child:hover:after {
+nav a.nav:first-child:hover:after {
   margin-left: -53px !important;
 }
 
-nav a:first-child:hover {
+nav a.nav:first-child:hover {
   background: transparent;
 }
 
-nav a:first-child:hover:before {
+nav a.nav:first-child:hover:before {
   margin-left: -53px;
 }
 }

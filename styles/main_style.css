@@ -7,11 +7,11 @@ html {
   height: 100%; }
 body {
   background: #E5E4E2;
-  padding: 80px;
+  padding: 40px;
   font-family: 'Helvetica Neue', Helvetica, sans-serif;
-  color: #666; }
+  color: #6E6E70; }
 a {
-  color: #EB5250;
+  color: #AD6161;
   text-decoration: none; }
 a:hover {
   color: #B8A7A7; }
@@ -24,7 +24,7 @@ h2 {
   font-weight: bold;
   font-size: 20px; }
 div {
-  width: 600px; }
+  width: 700px; }
 p {
   margin-top: 24px;
   font-size: 18px;
