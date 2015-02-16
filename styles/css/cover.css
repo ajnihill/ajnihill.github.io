@@ -39,7 +39,6 @@ body {
   vertical-align: bottom;
 }
 .cover-container {
-  background: #000000;
   margin-right: auto;
   margin-left: auto;
 }
@@ -51,7 +50,7 @@ body {
 @media (min-width: 768px) {
   /* Start the vertical centering */
   .site-wrapper-inner {
-    vertical-align: bottom;
+    vertical-align: middle;
     padding-bottom: 40px;
   }
   /* Handle the widths */
@@ -62,6 +61,6 @@ body {
 
 @media (min-width: 992px) {
   .cover-container {
-    width: 190px;
+    width: 900px;
   }
 }
