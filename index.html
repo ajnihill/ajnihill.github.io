@@ -8,59 +8,81 @@
     <meta name="author" content="">
     <link rel="icon" href="favicon.ico">
 
-    <title>AJ Nihill</title>
+    <title>Decidr</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="styles/css/bootstrap.min.css" rel="stylesheet">
+    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="styles/css/index.css" rel="stylesheet">
+    <link href="signin.css" rel="stylesheet">
+
+    <script src="assets/js/ie-emulation-modes-warning.js"></script>
+
+    <script language="JavaScript">
+      var counter = 2;
+      function subtractInput(divName) {
+        var parent = document.getElementById(divName);
+        var child = document.getElementById('Option' + counter);
+        parent.removeChild(child);
+        counter--;
+        console.log(counter);
+      }
+      function clearInputs(form) {
+          document.getElementById(form).reset();
+      }
+      function addInput(divName) {
+        var newdiv = document.createElement('div');
+        var newInput = "<input type='option' class='form-control' id='Option" + (counter + 1) + "' placeholder='Option " + (counter + 1) + "' required>";
+        newdiv.innerHTML = newInput;
+        document.getElementById(divName).appendChild(newdiv);
+        counter++;
+      }
+      function sortInputs(form) {
+        var inputsArr = [];
+        var elem = document.getElementsByClassName("form-control");
+        for (i = 0; i < elem.length; i++) {
+          inputsArr.push(elem[i].value);
+        }
+          var choiceIndex = Math.floor(Math.random() * inputsArr.length);
+          var choice = inputsArr[choiceIndex];
+          alert ("Go with: " + choice);
+      }
+    </script>
 
   </head>
 
   <body>
 
-    <!-- Fixed navbar -->
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <ul class="nav navbar-nav">
-            <li class="active"><a class="navbar-brand" href="#">AJ Nihill</a></li>
-          </ul>
-        </div>
-        <div id="navbar">
-          <ul class="nav navbar-nav">
-            <li><a href="bio.html">Bio</a></li>
-            <li><a href="work.html">Work</a></li>
-            <li><a href="photos.html">Photos</a></li>
-            <li><a href="connect.html">Connect</a></li>
-          </ul>
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="https://www.linkedin.com/in/alannihill" target="_blank"><span class="fontello icon-linkedin" aria-hidden="true"></span></a></li>
-            <li><a href="https://facebook.com/alan.nihill" target="_blank"><span class="fontello icon-facebook" aria-hidden="true"></span></a></li>
-            <li><a href="https://google.com/+AJNihill" target="_blank"><span class="fontello icon-gplus" aria-hidden="true"></span></a></li>
-            <li><a href="https://twitter.com/ajnihill" target="_blank"><span class="fontello icon-twitter" aria-hidden="true"></span></a></li>
-            <li><a href="https://github.com/ajnihill" target="_blank"><span class="fontello icon-github" aria-hidden="true"></span></a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
-    </nav>
+    <div class="container">
 
-    <div class="site-wrapper">
-      <div class="site-wrapper-inner">
-        <div class="cover-container">
-          <p class="lead">Hello, my name is AJ.</p>
+      <form class="form-signin" id="myForm" method="POST">
+        <h2 class="form-signin-heading">Enter your choices</h2>
+        <div id="dynamicInput">
+          <input type="option" class="form-control" id="Option1" placeholder="Option 1" autofocus>
+          <input type="option" class="form-control" id="Option2" placeholder="Option 2">
         </div>
-      </div>
-    </div>
+        <div class="btn-group btn-group-justified" role="group" aria-label="...">
+          <div class="btn-group" role="group">
+            <button type="button" class="btn btn-lg btn-default" onClick="subtractInput('dynamicInput');">
+              <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
+            </button>
+          </div>
+          <div class="btn-group" role="group">
+            <button type="button" class="btn btn-lg btn-default" onClick="clearInputs('myForm')">Clear</button>
+          </div>
+          <div class="btn-group" role="group">
+            <button type="button" class="btn btn-lg btn-default" onClick="addInput('dynamicInput');">
+              <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+            </button>
+          </div>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit" onClick="sortInputs('myForm')">Decide!</button>
+      </form>
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/docs.min.js"></script>
+    </div> <!-- /container -->
+
+
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="js/ie10-viewport-bug-workaround.js"></script>
+    <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
   </body>
 </html>
