@@ -30,10 +30,14 @@
           document.getElementById(form).reset();
       }
       function addInput(divName) {
-        var newdiv = document.createElement('div');
-        var newInput = "<input type='option' class='form-control' id='Option" + (counter + 1) + "' placeholder='Option " + (counter + 1) + "'>";
-        newdiv.innerHTML = newInput;
-        document.getElementById(divName).appendChild(newdiv);
+        var element = document.getElementById(divName);
+        var input = document.createElement("input");
+        input.type = "option";
+        input.className = "form-control";
+        input.id = "Option" + (counter + 1);
+        input.placeholder = "Option " + (counter + 1);
+        console.log(input);
+        element.appendChild(input);
         counter++;
       }
       function sortInputs(form) {
@@ -57,8 +61,8 @@
       <form class="form-signin" id="myForm" method="POST">
         <h2 class="form-signin-heading">Enter your choices</h2>
         <div id="dynamicInput">
-          <input type="option" class="form-control" id="Option1" placeholder="Option 1" autofocus>
-          <input type="option" class="form-control" id="Option2" placeholder="Option 2">
+          <input type="option" class="form-control" id="Option1" placeholder="Option 1" autofocus></input>
+          <input type="option" class="form-control" id="Option2" placeholder="Option 2"></input>
         </div>
         <div class="btn-group btn-group-justified" role="group" aria-label="...">
           <div class="btn-group" role="group">
