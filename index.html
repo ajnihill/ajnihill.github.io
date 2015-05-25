@@ -32,7 +32,7 @@
       }
       function addInput(divName) {
         var newdiv = document.createElement('div');
-        var newInput = "<input type='option' class='form-control' id='Option" + (counter + 1) + "' placeholder='Option " + (counter + 1) + "' required>";
+        var newInput = "<input type='option' class='form-control' id='Option" + (counter + 1) + "' placeholder='Option " + (counter + 1) + "'>";
         newdiv.innerHTML = newInput;
         document.getElementById(divName).appendChild(newdiv);
         counter++;
